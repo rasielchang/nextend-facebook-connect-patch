@@ -2,10 +2,10 @@
 
 /*
 Plugin Name: Nextend Facebook Connect
-Plugin URI: http://nextendweb.com/
-Description: This plugins helps you create Facebook login and register buttons. The login and register process only takes one click.
-Version: 1.5.4
-Author: Roland Soos
+Plugin URI: https://github.com/rasielchang/nextend-facebook-connect-patch
+Description: ==IMPORTANT== THIS IS A PATCH VERSION OF Nextend Facebook Connect THAT MAKE IT IS COMPATIBLE WITH FACEBOOK OPEN GRAPH API 2.0+. I DON'T GUARANTEE THIS WORK. PLEASE NOTE YOU NEED TO LOAD FACEBOOK JAVASCRIPT SDK TO MAKE THIS PLUGIN WORK. This plugins helps you create Facebook login and register buttons. The login and register process only takes one click.
+Version: 2.0.0
+Author: Rasiel Chang
 License: GPL2
 */
 
@@ -24,6 +24,11 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+
+// include patch file
+require_once ( dirname( __FILE__ ) . '/patch.php');
+
+
 global $new_fb_settings;
 define('NEW_FB_LOGIN', 1);
 if (!defined('NEW_FB_LOGIN_PLUGIN_BASENAME')) define('NEW_FB_LOGIN_PLUGIN_BASENAME', plugin_basename(__FILE__));
