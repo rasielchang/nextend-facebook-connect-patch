@@ -434,7 +434,7 @@ Miscellaneous functions
 function new_fb_sign_button() {
 
   global $new_fb_settings;
-  return '<a href="' . new_fb_login_url() . (isset($_GET['redirect_to']) ? '&redirect=' . $_GET['redirect_to'] : '') . '" rel="nofollow">' . $new_fb_settings['fb_login_button'] . '</a><br />';
+  return '<a href="' . new_fb_login_url() . (isset($_GET['redirect_to']) ? '&redirect=' . htmlentities( $_GET['redirect_to'] ) : '') . '" rel="nofollow">' . $new_fb_settings['fb_login_button'] . '</a><br />';
 }
 
 function new_fb_link_button() {
